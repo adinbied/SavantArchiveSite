@@ -380,24 +380,12 @@ a:hover, a:focus, a:active {
   color: #ecb807 !important;
 }
 
-/* Flex styles -------------------------------------------------*/
-header {
-  display: flex;
-  align-items: center;
-}
-
-@media (min-width: 700px) {
- .leading {
-    display: flex;
-    align-items: center;
-  }
-}
 
 
 /* Grid styles -------------------------------------------------*/
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
   grid-gap: 30px;
 }
 
@@ -407,51 +395,9 @@ body {
   font-family: 'Quicksand', sans-serif;
 }
 
-header {
-  padding: 10px;
-  font-size: 2em;
-  color: white;
-  background-color: #333;
-}
-
-.logo {
-  height: 50px;
-  margin-right: 20px;
-}
-
-.leading {
-  height: 240px;
-  margin-bottom: 30px;
-  padding: 30px;
-  color: white;
-  background: url('https://cdn.glitch.com/a5121e34-96b3-4a70-8227-040c51e64fae%2Fcat.jpg?1509635989509') center #333 no-repeat;
-  background-size: cover;
-  color: white;
-  text-shadow: 0px 0px 5px #000;
-}
-
-.leading-bigtext {
-  margin-right: 60px;
-  font-weight: bold;
-  font-size: 24vw;
-}
-
-@media (min-width: 700px) {
-  .leading-bigtext {
-    font-size: 140px;
-  }
-}
-
-.leading-text {
-  max-width: 900px;
-  font-size: 1.2em;
-  line-height: 1.4em;
-}
-
 .cards {
   max-width: 960px;
   margin: 0 auto 30px;
-
 }
 
 article {
@@ -459,9 +405,9 @@ article {
 }
 
 .article-img {
-  height: 200px;
+  height: auto;
   width: 100%;
-  object-fit: cover;
+
 }
 
 .article-title {
@@ -475,3 +421,18 @@ article {
 .cards article:hover {
     opacity: .5;
 }
+body{ background: #ddd; margin: 0; padding: 0; }
+		#container{ width: 950px; margin: 0 auto; background: #fff; padding: 200px 25px; }
+		table{ border-collapse: collapse; width: 100% }
+		td{ border: 1px solid #eee; padding: 5px; }
+
+		@media screen and (max-width: 480px){
+
+			#container{ width: auto; margin: 0; padding: 25px 0; }
+			table { display: block; }
+			td{ display: block; padding: 5px 0; border: none; }
+			td img{ display: block; margin: 0; width: 100%; max-width: none; }
+
+		}
+
+		img{ max-width: 100%; height: auto; width: auto\\9; /* ie8 */ }
